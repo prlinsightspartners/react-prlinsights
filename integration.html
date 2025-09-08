@@ -1,22 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Integration | PRL Insights & Partners</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,opsz,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/react-prlinsights/assets/index-EYDF9hvs.js"></script>
-    <link rel="stylesheet" crossorigin href="/react-prlinsights/assets/index-D8Ftm28l.css">
-  </head>
-  <body>
-    <div id="root">
-      <main style="padding:2rem;text-align:center;">
-        <h1>Integration</h1>
-        <p>Seamlessly integrate your data sources and marketing platforms with PRL Insights & Partners for unified analytics and optimization.</p>
-      </main>
-    </div>
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Integration - DataInsights Pro</title>
+    <meta name="description" content="Seamlessly connect your existing data infrastructure with our advanced analytics platform. RESTful APIs, real-time processing, and enterprise-grade security.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-header">
+                <a href="index.html" class="logo">DataInsights Pro</a>
+                <button class="nav-toggle" onclick="toggleMobileNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="integration.html" class="nav-link">Integration</a>
+                <a href="case-studies.html" class="nav-link">Case Studies</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="contact.html" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="section-header">
+                <h1>Technical <span class="text-primary">Integration</span></h1>
+                <p>Seamlessly connect your existing data infrastructure with our advanced analytics platform</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Features -->
+    <section class="services">
+        <div class="container">
+            <div class="feature-grid-large">
+                <div class="feature-card">
+                    <div class="feature-icon primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16,18 22,12 16,6"/>
+                            <polyline points="8,6 2,12 8,18"/>
+                        </svg>
+                    </div>
+                    <h3>RESTful APIs</h3>
+                    <p>Modern REST API endpoints with comprehensive documentation and SDKs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon accent">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                        </svg>
+                    </div>
+                    <h3>Real-time Processing</h3>
+                    <p>Stream processing capabilities for real-time analytics and optimization</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M3 5v14a9 3 0 0 0 18 0V5"/>
+                            <path d="M3 12a9 3 0 0 0 18 0"/>
+                        </svg>
+                    </div>
+                    <h3>Data Connectors</h3>
+                    <p>Pre-built connectors for major advertising platforms and analytics tools</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                            <circle cx="12" cy="16" r="1"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>SOC 2 Type II compliance with end-to-end encryption and custom SLAs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Integration Section -->
+    <section class="integration">
+        <div class="container">
+            <div class="section-header">
+                <h2>API Integration Examples</h2>
+                <p>Simple, powerful APIs that integrate seamlessly with your existing technology stack</p>
+            </div>
+            <div class="api-examples">
+                <div class="api-example-large">
+                    <div class="api-header">
+                        <h3>Authentication</h3>
+                        <span class="badge">POST</span>
+                    </div>
+                    <pre class="code-block"><code>curl -X POST https://api.datainsights.pro/v1/auth \
+  -H "Content-Type: application/json" \
+  -d '{
+    "client_id": "your_client_id",
+    "client_secret": "your_client_secret"
+  }'</code></pre>
+                    <div class="api-response">
+                        <h4>Response:</h4>
+                        <pre><code>{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "Bearer",
+  "expires_in": 3600
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="api-example-large">
+                    <div class="api-header">
+                        <h3>Data Upload</h3>
+                        <span class="badge accent">POST</span>
+                    </div>
+                    <pre class="code-block"><code>curl -X POST https://api.datainsights.pro/v1/data \
+  -H "Authorization: Bearer {token}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "marketing_campaigns",
+    "data": [
+      {
+        "campaign_id": "12345",
+        "spend": 10000,
+        "impressions": 500000,
+        "clicks": 2500,
+        "conversions": 125,
+        "date": "2024-01-01"
+      }
+    ]
+  }'</code></pre>
+                </div>
+
+                <div class="api-example-large">
+                    <div class="api-header">
+                        <h3>Get Analytics</h3>
+                        <span class="badge secondary">GET</span>
+                    </div>
+                    <pre class="code-block"><code>curl -X GET https://api.datainsights.pro/v1/analytics/attribution \
+  -H "Authorization: Bearer {token}" \
+  -G -d "campaign_id=12345" \
+  -d "date_range=30d"</code></pre>
+                    <div class="api-response">
+                        <h4>Response:</h4>
+                        <pre><code>{
+  "attribution_model": "data_driven",
+  "touchpoints": [
+    {
+      "channel": "google_ads",
+      "attribution_credit": 0.35,
+      "conversions": 43.75
+    },
+    {
+      "channel": "facebook_ads",
+      "attribution_credit": 0.28,
+      "conversions": 35.00
+    }
+  ],
+  "total_conversions": 125
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Sources Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Supported Data Sources</h2>
+                <p>Connect with all your marketing platforms and data sources</p>
+            </div>
+            <div class="data-sources-grid">
+                <div class="source-category">
+                    <h3>Advertising Platforms</h3>
+                    <div class="source-items">
+                        <div class="source-item-detailed">
+                            <div class="source-icon google"></div>
+                            <div class="source-info">
+                                <h4>Google Marketing Platform</h4>
+                                <p>Google Ads, Analytics 4, DV360, Campaign Manager</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Real-time sync</span>
+                                    <span class="feature-tag">Historical data</span>
+                                    <span class="feature-tag">Cost data</span>
+                                </div>
+                            </div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <div class="source-item-detailed">
+                            <div class="source-icon meta"></div>
+                            <div class="source-info">
+                                <h4>Meta Business</h4>
+                                <p>Facebook Ads, Instagram Ads, Meta Pixel</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Conversion API</span>
+                                    <span class="feature-tag">Attribution</span>
+                                    <span class="feature-tag">Audience sync</span>
+                                </div>
+                            </div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <div class="source-item-detailed">
+                            <div class="source-icon other"></div>
+                            <div class="source-info">
+                                <h4>Other Platforms</h4>
+                                <p>LinkedIn, TikTok, Twitter, Amazon DSP, Microsoft Ads</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">API integration</span>
+                                    <span class="feature-tag">Custom connectors</span>
+                                </div>
+                            </div>
+                            <span class="status available">Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="source-category">
+                    <h3>Analytics & CRM</h3>
+                    <div class="source-items">
+                        <div class="source-item-detailed">
+                            <div class="source-icon analytics"></div>
+                            <div class="source-info">
+                                <h4>Web Analytics</h4>
+                                <p>Google Analytics, Adobe Analytics, Mixpanel</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Event tracking</span>
+                                    <span class="feature-tag">User journeys</span>
+                                </div>
+                            </div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <div class="source-item-detailed">
+                            <div class="source-icon crm"></div>
+                            <div class="source-info">
+                                <h4>CRM Systems</h4>
+                                <p>Salesforce, HubSpot, Marketo, Pardot</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Lead attribution</span>
+                                    <span class="feature-tag">Sales sync</span>
+                                </div>
+                            </div>
+                            <span class="status active">Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="source-category">
+                    <h3>Custom Data Sources</h3>
+                    <div class="source-items">
+                        <div class="source-item-detailed">
+                            <div class="source-icon custom"></div>
+                            <div class="source-info">
+                                <h4>Database Integration</h4>
+                                <p>PostgreSQL, MySQL, Snowflake, BigQuery</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">SQL queries</span>
+                                    <span class="feature-tag">Scheduled sync</span>
+                                </div>
+                            </div>
+                            <span class="status available">Available</span>
+                        </div>
+                        <div class="source-item-detailed">
+                            <div class="source-icon files"></div>
+                            <div class="source-info">
+                                <h4>File Uploads</h4>
+                                <p>CSV, JSON, Parquet files via SFTP or API</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Batch upload</span>
+                                    <span class="feature-tag">Data validation</span>
+                                </div>
+                            </div>
+                            <span class="status available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Features -->
+    <section class="integration">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise Features</h2>
+                <p>Built for scale, security, and reliability</p>
+            </div>
+            <div class="enterprise-features">
+                <div class="feature-group">
+                    <div class="feature-group-header">
+                        <div class="feature-icon primary">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                                <circle cx="12" cy="16" r="1"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <h3>Security & Compliance</h3>
+                    </div>
+                    <ul class="feature-list">
+                        <li>SOC 2 Type II certified</li>
+                        <li>End-to-end encryption (AES-256)</li>
+                        <li>GDPR & CCPA compliant</li>
+                        <li>Role-based access control</li>
+                        <li>Audit logging & monitoring</li>
+                    </ul>
+                </div>
+                <div class="feature-group">
+                    <div class="feature-group-header">
+                        <div class="feature-icon accent">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                            </svg>
+                        </div>
+                        <h3>Performance & Scale</h3>
+                    </div>
+                    <ul class="feature-list">
+                        <li>Real-time data processing</li>
+                        <li>99.9% uptime SLA</li>
+                        <li>Auto-scaling infrastructure</li>
+                        <li>Global CDN distribution</li>
+                        <li>Rate limiting & throttling</li>
+                    </ul>
+                </div>
+                <div class="feature-group">
+                    <div class="feature-group-header">
+                        <div class="feature-icon secondary">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3>Support & Integration</h3>
+                    </div>
+                    <ul class="feature-list">
+                        <li>Dedicated technical support</li>
+                        <li>Custom SLA agreements</li>
+                        <li>SDK libraries (Python, R, JavaScript)</li>
+                        <li>Webhook notifications</li>
+                        <li>White-label solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact" style="padding: 3rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ready to Integrate?</h2>
+                <p>Get started with our APIs and connect your data sources today</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#" class="btn btn-primary btn-lg">Get API Documentation</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Schedule Technical Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DataInsights Pro</h3>
+                    <p>Advanced marketing analytics and optimization consulting for data-driven enterprises. Transform your marketing performance with scientific rigor and proven methodologies.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Marketing Analytics</a></li>
+                        <li><a href="services.html">Media Optimization</a></li>
+                        <li><a href="services.html">Causal Inference</a></li>
+                        <li><a href="integration.html">Data Integration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 DataInsights Pro. All rights reserved.
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">API Documentation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+
+    <style>
+        .feature-grid-large {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .api-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .api-example-large {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+        }
+
+        .api-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .api-header h3 {
+            margin: 0;
+            color: var(--card-foreground);
+        }
+
+        .badge.accent {
+            background-color: var(--accent);
+        }
+
+        .badge.secondary {
+            background-color: var(--secondary);
+        }
+
+        .api-response {
+            margin-top: 1rem;
+        }
+
+        .api-response h4 {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            margin-bottom: 0.5rem;
+        }
+
+        .data-sources-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .source-category h3 {
+            margin-bottom: 1.5rem;
+            color: var(--foreground);
+        }
+
+        .source-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .source-item-detailed {
+            display: flex;
+            align-items: flex-start;
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            gap: 1rem;
+        }
+
+        .source-item-detailed .source-info {
+            flex-grow: 1;
+        }
+
+        .source-item-detailed .source-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--card-foreground);
+        }
+
+        .source-item-detailed .source-info p {
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .source-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .feature-tag {
+            background-color: var(--muted);
+            color: var(--muted-foreground);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .source-icon.analytics,
+        .source-icon.crm,
+        .source-icon.other,
+        .source-icon.files {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: var(--radius);
+            background-color: var(--muted);
+        }
+
+        .enterprise-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-group {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+        }
+
+        .feature-group-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-group-header h3 {
+            margin: 0;
+            color: var(--card-foreground);
+        }
+
+        .feature-group .feature-list {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid-large {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .enterprise-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
 </html>
