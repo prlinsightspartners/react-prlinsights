@@ -35,7 +35,7 @@ export default function Contact() {
                 <CardTitle>Email</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">hello@datainsightspro.com</p>
+                <p className="text-muted-foreground">hello@prlinsights.com</p>
               </CardContent>
             </Card>
 
@@ -47,7 +47,7 @@ export default function Contact() {
                 <CardTitle>Phone</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                <p className="text-muted-foreground">+1 (647) 425-7751</p>
               </CardContent>
             </Card>
 
@@ -59,7 +59,7 @@ export default function Contact() {
                 <CardTitle>Locations</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">San Francisco, CA & New York, NY</p>
+                <p className="text-muted-foreground">Toronto, Canada</p>
               </CardContent>
             </Card>
 

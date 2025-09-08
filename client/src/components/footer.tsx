@@ -6,14 +6,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-xl font-bold mb-4">DataInsights Pro</h3>
+            <h3 className="text-xl font-bold mb-4">PRL Insights & Partners</h3>
             <p className="text-secondary-foreground/80 mb-6 max-w-md">
               Advanced marketing analytics and optimization consulting for data-driven enterprises. 
               Transform your marketing performance with scientific rigor and proven methodologies.
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.linkedin.com/company/prlinsights/" 
                 className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:bg-primary/90 transition-colors duration-200"
                 data-testid="link-linkedin"
               >
@@ -129,7 +129,7 @@ export default function Footer() {
         
         <div className="border-t border-secondary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-secondary-foreground/80 text-sm">
-            © 2024 DataInsights Pro. All rights reserved.
+            © 2025 PRL Insights & Partners Inc. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a 
