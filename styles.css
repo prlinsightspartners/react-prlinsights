@@ -143,8 +143,8 @@ p {
 }
 
 .nav-menu {
-    display: flex;
-    align-items: right;
+    display: inline-flex;
+    align-items: center;
     gap: 4rem;
 }
 
