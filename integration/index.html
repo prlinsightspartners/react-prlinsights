@@ -61,7 +61,319 @@
 		</div>
 	</section>
 
-	<!-- ...existing content unchanged... -->
+	 <!-- Technical Features -->
+    <section class="services">
+        <div class="container">
+            <div class="feature-grid-large">
+                <div class="feature-card">
+                    <div class="feature-icon primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16,18 22,12 16,6"/>
+                            <polyline points="8,6 2,12 8,18"/>
+                        </svg>
+                    </div>
+                    <h3>RESTful APIs</h3>
+                    <p>Modern REST API endpoints with comprehensive documentation and SDKs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon accent">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                        </svg>
+                    </div>
+                    <h3>Real-time Processing</h3>
+                    <p>Stream processing capabilities for real-time analytics and optimization</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M3 5v14a9 3 0 0 0 18 0V5"/>
+                            <path d="M3 12a9 3 0 0 0 18 0"/>
+                        </svg>
+                    </div>
+                    <h3>Data Connectors</h3>
+                    <p>Pre-built connectors for major advertising platforms and analytics tools</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                            <circle cx="12" cy="16" r="1"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>SOC 2 Type II compliance with end-to-end encryption and custom SLAs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Integration Section -->
+    <section class="integration">
+        <div class="container">
+            <div class="section-header">
+                <h2>API Integration Examples</h2>
+                <p>Simple, powerful APIs that integrate seamlessly with your existing technology stack</p>
+            </div>
+            <div class="api-examples">
+                <div class="api-example-large">
+                    <div class="api-header">
+                        <h3>Authentication</h3>
+                        <span class="badge">POST</span>
+                    </div>
+                    <pre class="code-block"><code>curl -X POST https://api.datainsights.pro/v1/auth \
+  -H "Content-Type: application/json" \
+  -d '{
+    "client_id": "your_client_id",
+    "client_secret": "your_client_secret"
+  }'</code></pre>
+                    <div class="api-response">
+                        <h4>Response:</h4>
+                        <pre><code>{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "Bearer",
+  "expires_in": 3600
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="api-example-large">
+                    <div class="api-header">
+                        <h3>Data Upload</h3>
+                        <span class="badge accent">POST</span>
+                    </div>
+                    <pre class="code-block"><code>curl -X POST https://api.datainsights.pro/v1/data \
+  -H "Authorization: Bearer {token}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "marketing_campaigns",
+    "data": [
+      {
+        "campaign_id": "12345",
+        "spend": 10000,
+        "impressions": 500000,
+        "clicks": 2500,
+        "conversions": 125,
+        "date": "2024-01-01"
+      }
+    ]
+  }'</code></pre>
+                </div>
+
+                <div class="api-example-large">
+                    <div class="api-header">
+                        <h3>Get Analytics</h3>
+                        <span class="badge secondary">GET</span>
+                    </div>
+                    <pre class="code-block"><code>curl -X GET https://api.datainsights.pro/v1/analytics/attribution \
+  -H "Authorization: Bearer {token}" \
+  -G -d "campaign_id=12345" \
+  -d "date_range=30d"</code></pre>
+                    <div class="api-response">
+                        <h4>Response:</h4>
+                        <pre><code>{
+  "attribution_model": "data_driven",
+  "touchpoints": [
+    {
+      "channel": "google_ads",
+      "attribution_credit": 0.35,
+      "conversions": 43.75
+    },
+    {
+      "channel": "facebook_ads",
+      "attribution_credit": 0.28,
+      "conversions": 35.00
+    }
+  ],
+  "total_conversions": 125
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Sources Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Supported Data Sources</h2>
+                <p>Connect with all your marketing platforms and data sources</p>
+            </div>
+            <div class="data-sources-grid">
+                <div class="source-category">
+                    <h3>Advertising Platforms</h3>
+                    <div class="source-items">
+                        <div class="source-item-detailed">
+                            <div class="source-icon google"></div>
+                            <div class="source-info">
+                                <h4>Google Marketing Platform</h4>
+                                <p>Google Ads, Analytics 4, DV360, Campaign Manager</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Real-time sync</span>
+                                    <span class="feature-tag">Historical data</span>
+                                    <span class="feature-tag">Cost data</span>
+                                </div>
+                            </div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <div class="source-item-detailed">
+                            <div class="source-icon meta"></div>
+                            <div class="source-info">
+                                <h4>Meta Business</h4>
+                                <p>Facebook Ads, Instagram Ads, Meta Pixel</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Conversion API</span>
+                                    <span class="feature-tag">Attribution</span>
+                                    <span class="feature-tag">Audience sync</span>
+                                </div>
+                            </div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <div class="source-item-detailed">
+                            <div class="source-icon other"></div>
+                            <div class="source-info">
+                                <h4>Other Platforms</h4>
+                                <p>LinkedIn, TikTok, Twitter, Amazon DSP, Microsoft Ads</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">API integration</span>
+                                    <span class="feature-tag">Custom connectors</span>
+                                </div>
+                            </div>
+                            <span class="status available">Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="source-category">
+                    <h3>Analytics & CRM</h3>
+                    <div class="source-items">
+                        <div class="source-item-detailed">
+                            <div class="source-icon analytics"></div>
+                            <div class="source-info">
+                                <h4>Web Analytics</h4>
+                                <p>Google Analytics, Adobe Analytics, Mixpanel</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Event tracking</span>
+                                    <span class="feature-tag">User journeys</span>
+                                </div>
+                            </div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <div class="source-item-detailed">
+                            <div class="source-icon crm"></div>
+                            <div class="source-info">
+                                <h4>CRM Systems</h4>
+                                <p>Salesforce, HubSpot, Marketo, Pardot</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Lead attribution</span>
+                                    <span class="feature-tag">Sales sync</span>
+                                </div>
+                            </div>
+                            <span class="status active">Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="source-category">
+                    <h3>Custom Data Sources</h3>
+                    <div class="source-items">
+                        <div class="source-item-detailed">
+                            <div class="source-icon custom"></div>
+                            <div class="source-info">
+                                <h4>Database Integration</h4>
+                                <p>PostgreSQL, MySQL, Snowflake, BigQuery</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">SQL queries</span>
+                                    <span class="feature-tag">Scheduled sync</span>
+                                </div>
+                            </div>
+                            <span class="status available">Available</span>
+                        </div>
+                        <div class="source-item-detailed">
+                            <div class="source-icon files"></div>
+                            <div class="source-info">
+                                <h4>File Uploads</h4>
+                                <p>CSV, JSON, Parquet files via SFTP or API</p>
+                                <div class="source-features">
+                                    <span class="feature-tag">Batch upload</span>
+                                    <span class="feature-tag">Data validation</span>
+                                </div>
+                            </div>
+                            <span class="status available">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Features -->
+    <section class="integration">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise Features</h2>
+                <p>Built for scale, security, and reliability</p>
+            </div>
+            <div class="enterprise-features">
+                <div class="feature-group">
+                    <div class="feature-group-header">
+                        <div class="feature-icon primary">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                                <circle cx="12" cy="16" r="1"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <h3>Security & Compliance</h3>
+                    </div>
+                    <ul class="feature-list">
+                        <li>SOC 2 Type II certified</li>
+                        <li>End-to-end encryption (AES-256)</li>
+                        <li>GDPR & CCPA compliant</li>
+                        <li>Role-based access control</li>
+                        <li>Audit logging & monitoring</li>
+                    </ul>
+                </div>
+                <div class="feature-group">
+                    <div class="feature-group-header">
+                        <div class="feature-icon accent">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                            </svg>
+                        </div>
+                        <h3>Performance & Scale</h3>
+                    </div>
+                    <ul class="feature-list">
+                        <li>Real-time data processing</li>
+                        <li>99.9% uptime SLA</li>
+                        <li>Auto-scaling infrastructure</li>
+                        <li>Global CDN distribution</li>
+                        <li>Rate limiting & throttling</li>
+                    </ul>
+                </div>
+                <div class="feature-group">
+                    <div class="feature-group-header">
+                        <div class="feature-icon secondary">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3>Support & Integration</h3>
+                    </div>
+                    <ul class="feature-list">
+                        <li>Dedicated technical support</li>
+                        <li>Custom SLA agreements</li>
+                        <li>SDK libraries (Python, R, JavaScript)</li>
+                        <li>Webhook notifications</li>
+                        <li>White-label solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
 	<!-- CTA Section -->
 	<section class="contact" style="padding: 3rem 0;">
