@@ -21,7 +21,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Client Success Stories - PRL Insights & Partners</title>
 	<meta name="description" content="See how leading companies have transformed their marketing performance with our data-driven solutions. Real results from e-commerce, SaaS, and fintech clients.">
-	<link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./case-studies.css">
 </head>
 <body>
 	 <!-- Google Tag Manager (noscript) -->
@@ -92,87 +93,6 @@
                                 <p>We implemented a comprehensive data-driven attribution model combined with media optimization strategies that provided clear visibility into the true impact of each marketing touchpoint.</p>
                                 <div class="solution-steps">
                                     <div class="solution-step">
-                                        <div class="step-number">1</div>
-                                        <div class="step-content">
-                                            <h4>Data Integration & Cleanup</h4>
-                                            <p>Connected 12 different data sources and cleaned inconsistent tracking</p>
-                                        </div>
-                                    </div>
-                                    <div class="solution-step">
-                                        <div class="step-number">2</div>
-                                        <div class="step-content">
-                                            <h4>Attribution Modeling</h4>
-                                            <p>Built custom data-driven attribution using machine learning algorithms</p>
-                                        </div>
-                                    </div>
-                                    <div class="solution-step">
-                                        <div class="step-number">3</div>
-                                        <div class="step-content">
-                                            <h4>Media Optimization</h4>
-                                            <p>Implemented real-time bidding optimization and budget reallocation</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="results-section">
-                                <h3>The Results</h3>
-                                <p>Within 6 months, the client saw dramatic improvements across all key metrics, with the attribution model revealing previously hidden high-value touchpoints that led to significant budget optimizations.</p>
-                            </div>
-                        </div>
-                        <div class="case-study-sidebar">
-                            <div class="metrics-card">
-                                <h3>Key Results</h3>
-                                <div class="metric-large">
-                                    <div class="metric-value-large">+40%</div>
-                                    <div class="metric-label-large">Conversion Rate</div>
-                                </div>
-                                <div class="metric-large">
-                                    <div class="metric-value-large">+60%</div>
-                                    <div class="metric-label-large">Ad Efficiency</div>
-                                </div>
-                                <div class="metric-large">
-                                    <div class="metric-value-large">250%</div>
-                                    <div class="metric-label-large">ROI Improvement</div>
-                                </div>
-                            </div>
-                            <div class="tags-card">
-                                <h3>Technologies Used</h3>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Attribution Modeling</span>
-                                    <span class="tech-tag">Media Optimization</span>
-                                    <span class="tech-tag">Machine Learning</span>
-                                    <span class="tech-tag">Real-time Bidding</span>
-                                </div>
-                            </div>
-                            <div class="client-info">
-                                <h3>Client Profile</h3>
-                                <div class="client-details">
-                                    <div class="client-detail">
-                                        <strong>Industry:</strong> Fashion E-commerce
-                                    </div>
-                                    <div class="client-detail">
-                                        <strong>Revenue:</strong> $500M+ annually
-                                    </div>
-                                    <div class="client-detail">
-                                        <strong>Channels:</strong> 12 marketing channels
-                                    </div>
-                                    <div class="client-detail">
-                                        <strong>Project Duration:</strong> 6 months
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Study 2 -->
-                <div class="case-study-detailed">
-                    <div class="case-study-hero">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400" alt="SaaS analytics dashboard">
-                        <div class="case-study-overlay">
-                            <span class="industry-badge large">SAAS</span>
-                            <h2>Reduced Churn by 35%</h2>
                             <p class="case-subtitle">B2B SaaS Platform</p>
                         </div>
                     </div>
@@ -437,12 +357,247 @@
 	</script>
 
 	<style>
-		.case-studies-detailed {
-			display: flex;
-			flex-direction: column;
-			gap: 4rem;
-		}
-		/* ...existing styles unchanged... */
-	</style>
+        .case-studies-detailed {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .case-study-detailed {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .case-study-hero {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .case-study-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .case-study-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 2rem;
+        }
+
+        .industry-badge.large {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--accent-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-overlay h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-subtitle {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .case-study-content-detailed {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            padding: 3rem;
+        }
+
+        .case-study-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .challenge-section,
+        .solution-section,
+        .results-section {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .results-section {
+            border-bottom: none;
+        }
+
+        .challenge-section h3,
+        .solution-section h3,
+        .results-section h3 {
+            color: var(--foreground);
+            margin-bottom: 1rem;
+        }
+
+        .challenge-section ul,
+        .solution-section ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .challenge-section li,
+        .solution-section li {
+            color: var(--muted-foreground);
+            margin-bottom: 0.5rem;
+        }
+
+        .solution-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .solution-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .solution-step .step-number {
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+
+        .solution-step .step-content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--foreground);
+        }
+
+        .solution-step .step-content p {
+            font-size: 0.875rem;
+            margin: 0;
+            color: var(--muted-foreground);
+        }
+
+        .case-study-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .metrics-card,
+        .tags-card,
+        .client-info {
+            background-color: var(--muted);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .metrics-card h3,
+        .tags-card h3,
+        .client-info h3 {
+            margin-bottom: 1rem;
+            color: var(--foreground);
+        }
+
+        .metric-large {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .metric-large:last-child {
+            margin-bottom: 0;
+        }
+
+        .metric-value-large {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .metric-label-large {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            margin-top: 0.25rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background-color: var(--background);
+            color: var(--foreground);
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .client-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .client-detail {
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+        }
+
+        .client-detail strong {
+            color: var(--foreground);
+        }
+
+        @media (max-width: 768px) {
+            .case-study-content-detailed {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+                gap: 2rem;
+            }
+
+            .case-study-hero {
+                height: 200px;
+            }
+
+            .case-study-overlay {
+                padding: 1.5rem;
+            }
+
+            .case-study-overlay h2 {
+                font-size: 1.5rem;
+            }
+
+            .case-subtitle {
+                font-size: 1rem;
+            }
+
+            .solution-steps {
+                gap: 1rem;
+            }
+        }
+    </style>
 </body>
 </html>

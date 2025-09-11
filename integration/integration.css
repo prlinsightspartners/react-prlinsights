@@ -1,0 +1,108 @@
+/* Integration Page Custom Styles */
+
+.source-list-detailed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.source-item-detailed {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.source-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius);
+    background-color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.source-info {
+    flex-grow: 1;
+}
+
+.source-item-detailed .source-info h4 {
+    margin-bottom: 0.5rem;
+    color: var(--card-foreground);
+}
+
+.source-item-detailed .source-info p {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.source-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feature-tag {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.source-icon.analytics,
+.source-icon.crm,
+.source-icon.other,
+.source-icon.files {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius);
+    background-color: var(--muted);
+}
+
+.enterprise-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-group {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+}
+
+.feature-group-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-group-header h3 {
+    margin: 0;
+    color: var(--card-foreground);
+}
+
+.feature-group .feature-list {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .feature-grid-large {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .enterprise-features {
+        grid-template-columns: 1fr;
+    }
+}
