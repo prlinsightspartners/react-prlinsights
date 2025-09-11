@@ -95,7 +95,7 @@
             <div class="contact-content">
                 <div class="contact-form-section">
                     <h2>Schedule a Consultation</h2>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xwpnygzv" method="POST">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">First Name *</label>
@@ -332,35 +332,9 @@
 
         // Contact form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const services = [];
-            document.querySelectorAll('input[name="services"]:checked').forEach(cb => {
-                services.push(cb.value);
-            });
-
-            // Basic validation
-            if (services.length === 0) {
-                alert('Please select at least one service you\'re interested in.');
-                return;
-            }
-
-            // Simulate form submission
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = 'Submitting...';
-            submitButton.disabled = true;
-
-            // Simulate API call delay
-            setTimeout(() => {
-                alert('Thank you for your inquiry! We\'ll get back to you within 2 business hours with next steps and a proposed meeting time.');
-                this.reset();
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 1000);
-        });
+            // The form now submits directly to Formspree. You may add custom success handling if desired.
+            // Example: Show a thank you message after successful submission using Formspree's redirect or AJAX API.
+            // ...existing code...
 
         // Form field validation feedback
         document.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
