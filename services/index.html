@@ -21,7 +21,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Our Expert Services - PRL Insights & Partners</title>
 	<meta name="description" content="Comprehensive consulting solutions in marketing analytics, media optimization, and causal inference modeling. Transform your marketing data into actionable insights.">
-	<link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./services.css">
 	<link rel="icon" href="/assets/favicon.ico" type="/x-icon">
 </head>
 <body>
@@ -342,15 +343,122 @@
 		}
 	</script>
 
-	<style>
-		.service-detail {
-			display: grid;
-			grid-template-columns: 1fr 350px;
-			gap: 3rem;
-			align-items: start;
-			margin-bottom: 4rem;
-		}
-		/* ...existing styles unchanged... */
-	</style>
+ <style>
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+
+        .service-detail:nth-child(even) {
+            grid-template-columns: 350px 1fr;
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-header .service-icon {
+            margin-right: 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item h4 {
+            color: var(--foreground);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .feature-item p {
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .process-card {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            position: sticky;
+            top: 6rem;
+        }
+
+        .process-card h3 {
+            margin-bottom: 1.5rem;
+            color: var(--card-foreground);
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+
+        .step-number.accent {
+            background-color: var(--accent);
+        }
+
+        .step-number.secondary {
+            background-color: var(--secondary);
+        }
+
+        .step-content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--card-foreground);
+        }
+
+        .step-content p {
+            font-size: 0.875rem;
+            margin: 0;
+            color: var(--muted-foreground);
+        }
+
+        @media (max-width: 768px) {
+            .service-detail,
+            .service-detail:nth-child(even) {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-card {
+                position: static;
+            }
+        }
+    </style>
 </body>
 </html>
