@@ -22,6 +22,7 @@
     <title>Featured Insights - PRL Insights & Partners</title>
     <meta name="description" content="Explore articles and blogs from PRL Insights & Partners showcasing our expertise in marketing analytics, data science, and business transformation.">
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./featured-insights.css">
     <link rel="icon" href="/assets/favicon.ico" type="/x-icon">
 </head>
 <body>
@@ -50,29 +51,32 @@
             </div>
         </div>
     </nav>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="section-header">
-                <h1>Featured <span class="text-primary">Insights</span></h1>
-                <p>Explore our latest articles, blogs, and thought leadership in marketing analytics, data science, and business transformation.</p>
+    <header class="featured-header">
+        <h1>Featured Insights</h1>
+        <p>Explore our latest articles, blogs, and thought leadership in marketing analytics, data science, and business transformation.</p>
+    </header>
+    <main class="featured-main">
+        <aside class="featured-sidebar">
+            <div class="author-name">PRL Insights Team</div>
+            <div class="author-bio">Experts in marketing analytics, causal inference, and business transformation. Sharing actionable insights and proven strategies for data-driven growth.</div>
+            <h2>Search Insights</h2>
+            <input type="text" placeholder="Search articles..." style="width:100%;padding:0.5rem;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;">
+            <h2>Categories</h2>
+            <ul style="list-style:none;padding:0;margin:0 0 1rem 0;">
+                <li><a href="#">All</a></li>
+                <li><a href="#">Marketing Analytics</a></li>
+                <li><a href="#">Causal Inference</a></li>
+                <li><a href="#">Media Optimization</a></li>
+                <li><a href="#">Data Integration</a></li>
+            </ul>
+        </aside>
+        <section class="featured-content">
+            <div class="featured-list" id="articlesGrid">
+                <!-- Articles will be loaded here dynamically -->
             </div>
-        </div>
-    </section>
-    <!-- Insights Grid -->
-    <section class="insights">
-        <div class="container">
-            <div class="insights-grid">
-                <!-- Example Article Card -->
-                <div class="insight-card">
-                    <h2><a href="#">How Causal Inference is Transforming Marketing ROI</a></h2>
-                    <p class="insight-meta">By PRL Insights Team | September 2025</p>
-                    <p class="insight-summary">Discover how advanced causal inference methods are helping brands move beyond correlation and drive real business impact.</p>
-                </div>
-                <!-- Add more articles/blogs here -->
-            </div>
-        </div>
-    </section>
+            <div id="articleDetail" style="display:none;max-width:800px;margin:2rem auto;"></div>
+        </section>
+    </main>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -122,34 +126,67 @@
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
         }
+
+        // Dynamic article loading
+        async function loadArticles() {
+            const grid = document.getElementById('articlesGrid');
+            const detail = document.getElementById('articleDetail');
+            const res = await fetch('./articles.json');
+            const articles = await res.json();
+            grid.innerHTML = '';
+            detail.style.display = 'none';
+            articles.forEach(article => {
+                const card = document.createElement('div');
+                card.className = 'featured-card-row';
+                card.innerHTML = `
+                    <!-- <div class="featured-card-img">
+                        <img src="${article.image || '/assets/article-placeholder.jpg'}" alt="${article.title}" />
+                    </div> -->
+                    <div class="featured-card-content">
+                        <br>
+                        <h2 style="font-weight:bold;font-size:1.5rem;">${article.title}</h2>
+                        <div class="featured-meta"> ${article.date}</div>
+                        <div class="featured-summary">${article.summary}</div>
+                        <a href="#" class="featured-readmore" data-id="${article.id}">Read More</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            // Add click listeners
+            grid.querySelectorAll('.featured-readmore').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const id = this.getAttribute('data-id');
+                    showArticle(id, articles);
+                });
+            });
+        }
+
+        function showArticle(id, articles) {
+            const grid = document.getElementById('articlesGrid');
+            const detail = document.getElementById('articleDetail');
+            const article = articles.find(a => a.id === id);
+            if (!article) return;
+            grid.style.display = 'none';
+            detail.style.display = 'block';
+            detail.innerHTML = `
+                    <article>
+                        <!-- <img src="${article.image}" alt="${article.title}" class="featured-detail-img" /> -->
+                        <h1 style="font-size:2rem;font-weight:normal;">${article.title}</h1>
+                        <div class="featured-meta"> ${article.date}</div>
+                        <p class="featured-summary">${article.summary}</p>
+                        <hr>
+                        <div>${article.content}</div>
+                        <button id="backToList" style="margin-top:2rem;" class="btn btn-outline">Back to Insights</button>
+                    </article>
+            `;
+            document.getElementById('backToList').onclick = function() {
+                detail.style.display = 'none';
+                grid.style.display = 'grid';
+            };
+        }
+
+        window.addEventListener('DOMContentLoaded', loadArticles);
     </script>
-    <style>
-        .insights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .insight-card {
-            background-color: var(--card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 2rem;
-        }
-        .insight-card h2 {
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-            color: var(--card-foreground);
-        }
-        .insight-meta {
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
-            margin-bottom: 1rem;
-        }
-        .insight-summary {
-            font-size: 1rem;
-            color: var(--muted-foreground);
-        }
-    </style>
 </body>
 </html>
