@@ -147,7 +147,7 @@
                         <h2 style="font-weight:bold;font-size:1.5rem;">${article.title}</h2>
                         <div class="featured-meta"> ${article.date}</div>
                         <div class="featured-summary">${article.summary}</div>
-                        <a href="#" class="featured-readmore" data-id="${article.id}">Read More</a>
+                        <a href="?id=${article.id}" class="featured-readmore" data-id="${article.id}">Read More</a>
                     </div>
                 `;
                 grid.appendChild(card);
@@ -157,6 +157,7 @@
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const id = this.getAttribute('data-id');
+                    window.history.pushState({}, '', `?id=${id}`);
                     showArticle(id, articles);
                 });
             });
@@ -186,7 +187,17 @@
             };
         }
 
-        window.addEventListener('DOMContentLoaded', loadArticles);
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const articleId = params.get('id');
+            loadArticles().then(() => {
+                if (articleId) {
+                    fetch('./articles.json').then(res => res.json()).then(articles => {
+                        showArticle(articleId, articles);
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
