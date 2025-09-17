@@ -400,7 +400,7 @@ section {
 
 .feature-list li {
     padding: 0.5rem 0;
-    color: var(--muted-foreground);
+    color: grey;
     position: relative;
     padding-left: 1.5rem;
 }
