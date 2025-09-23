@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "industry": "E-COMMERCE",
+    "title": "250% ROI Improvement",
+    "client": "Global Fashion Retailer",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400",
+    "challenge": {
+      "summary": "A global fashion retailer with $500M+ annual revenue was struggling with fragmented attribution across their multi-channel marketing campaigns. They had limited visibility into which touchpoints were driving actual conversions, leading to suboptimal budget allocation and missed growth opportunities.",
+      "points": [
+        "Inconsistent attribution models across channels",
+        "Over-attribution to last-click channels",
+        "Limited understanding of customer journey complexity",
+        "Budget waste on low-performing campaigns"
+      ]
+    },
+    "solution": {
+      "summary": "We implemented a comprehensive data-driven attribution model combined with media optimization strategies that provided clear visibility into the true impact of each marketing touchpoint.",
+      "steps": []
+    },
+    "results": {
+      "summary": "",
+      "metrics": []
+    },
+    "technologies": [],
+    "clientProfile": {}
+  },
+  {
+    "id": 2,
+    "industry": "B2B SAAS",
+    "title": "Churn Reduction & LTV Growth",
+    "client": "B2B SaaS Platform",
+    "image": null,
+    "challenge": {
+      "summary": "A rapidly growing B2B SaaS platform was facing high customer churn rates that were impacting their unit economics and growth trajectory. They needed to identify at-risk customers early and develop targeted retention strategies.",
+      "points": [
+        "High churn rate affecting customer lifetime value",
+        "Inability to predict which customers would churn",
+        "Generic retention campaigns with low effectiveness",
+        "Limited understanding of churn drivers"
+      ]
+    },
+    "solution": {
+      "summary": "We developed a comprehensive predictive churn model combined with personalized retention campaigns that identified at-risk customers weeks before they would typically churn.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Behavioral Analysis",
+          "description": "Analyzed user engagement patterns and product usage data"
+        },
+        {
+          "number": 2,
+          "title": "Predictive Modeling",
+          "description": "Built machine learning models to predict churn probability"
+        },
+        {
+          "number": 3,
+          "title": "Retention Campaigns",
+          "description": "Designed personalized intervention strategies for at-risk segments"
+        }
+      ]
+    },
+    "results": {
+      "summary": "The predictive model achieved 85% accuracy in identifying at-risk customers, enabling proactive retention efforts that significantly improved customer lifetime value and reduced churn.",
+      "metrics": [
+        { "value": "-35%", "label": "Customer Churn" },
+        { "value": "+125%", "label": "LTV Increase" },
+        { "value": "85%", "label": "Prediction Accuracy" }
+      ]
+    },
+    "technologies": [
+      "Predictive Analytics",
+      "Customer Retention",
+      "Behavioral Analysis",
+      "Personalization"
+    ],
+    "clientProfile": {
+      "Industry": "B2B SaaS",
+      "Users": "50,000+ active users",
+      "Data Points": "200+ behavioral signals",
+      "Project Duration": "4 months"
+    }
+  },
+  {
+    "id": 3,
+    "industry": "FINTECH",
+    "title": "3x Marketing Efficiency",
+    "client": "Digital Banking Platform",
+    "image": "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400",
+    "challenge": {
+      "summary": "A leading fintech company specializing in digital banking was struggling with high customer acquisition costs and unclear understanding of which marketing activities were driving quality customers versus low-value sign-ups.",
+      "points": [
+        "High customer acquisition costs across channels",
+        "Difficulty distinguishing quality vs. quantity in acquisitions",
+        "Complex customer journey spanning multiple touchpoints",
+        "Regulatory constraints affecting data usage"
+      ]
+    },
+    "solution": {
+      "summary": "We applied causal inference modeling to understand the true incremental impact of marketing activities, combined with sophisticated cross-channel optimization to improve both acquisition quality and cost efficiency.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Incrementality Testing",
+          "description": "Designed experiments to measure true causal impact of campaigns"
+        },
+        {
+          "number": 2,
+          "title": "Quality Modeling",
+          "description": "Built models to predict customer lifetime value at acquisition"
+        },
+        {
+          "number": 3,
+          "title": "Cross-channel Optimization",
+          "description": "Optimized budget allocation based on incremental value"
+        }
+      ]
+    },
+    "results": {
+      "summary": "The causal inference approach revealed significant over-attribution to certain channels and identified high-impact, low-cost opportunities that dramatically improved marketing efficiency while maintaining acquisition quality.",
+      "metrics": [
+        { "value": "-65%", "label": "Acquisition Cost" },
+        { "value": "+180%", "label": "Campaign ROI" },
+        { "value": "3x", "label": "Marketing Efficiency" }
+      ]
+    },
+    "technologies": [
+      "Causal Inference",
+      "Cross-channel Optimization",
+      "Incrementality Testing",
+      "Quality Modeling"
+    ],
+    "clientProfile": {
+      "Industry": "Fintech/Digital Banking",
+      "Scale": "1M+ customers",
+      "Channels": "15 acquisition channels",
+      "Project Duration": "8 months"
+    }
+  }
+]

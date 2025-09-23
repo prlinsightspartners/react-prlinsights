@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "title": "Analytics Audit",
+    "price": "$25,000",
+    "period": "One-time assessment",
+    "features": [
+      "Comprehensive analytics audit",
+      "Attribution model evaluation",
+      "Optimization recommendations",
+      "Implementation roadmap",
+      "30-day email support"
+    ],
+    "button": {
+      "label": "Start Assessment",
+      "href": "/contact/",
+      "class": "btn btn-outline"
+    },
+    "popular": false
+  },
+  {
+    "id": 2,
+    "title": "Full Implementation",
+    "price": "$75,000",
+    "period": "3-month engagement",
+    "features": [
+      "Everything in Analytics Audit",
+      "Custom attribution modeling",
+      "Media optimization setup",
+      "Data integration & APIs",
+      "Team training & documentation",
+      "Ongoing optimization support"
+    ],
+    "button": {
+      "label": "Get Started",
+      "href": "/contact/",
+      "class": "btn btn-primary"
+    },
+    "popular": true
+  },
+  {
+    "id": 3,
+    "title": "Enterprise Partnership",
+    "price": "Custom",
+    "period": "Ongoing relationship",
+    "features": [
+      "Everything in Full Implementation",
+      "Advanced causal inference",
+      "Real-time optimization",
+      "Dedicated analytics team",
+      "Custom SLA & guarantees",
+      "24/7 technical support"
+    ],
+    "button": {
+      "label": "Contact Sales",
+      "href": "/contact/",
+      "class": "btn btn-outline"
+    },
+    "popular": false
+  }
+]

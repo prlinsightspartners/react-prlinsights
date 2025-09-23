@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Marketing Analytics",
+    "icon": "primary",
+    "description": "Advanced statistical modeling and data analysis to uncover hidden patterns in your marketing performance. Our team builds custom attribution models, maps customer journeys, and creates predictive analytics solutions.",
+    "features": [
+      {"title": "Multi-touch attribution modeling", "desc": "Understand the true impact of each touchpoint in your customer journey"},
+      {"title": "Customer lifetime value analysis", "desc": "Predict and optimize long-term customer value across segments"},
+      {"title": "Predictive churn modeling", "desc": "Identify at-risk customers before they leave"},
+      {"title": "Marketing mix modeling (MMM)", "desc": "Optimize budget allocation across all marketing channels"},
+      {"title": "Customer journey mapping", "desc": "Visualize and optimize the complete customer experience"},
+      {"title": "Cohort analysis and segmentation", "desc": "Understand behavior patterns across different customer groups"}
+    ],
+    "processTitle": "Implementation Process",
+    "process": [
+      {"number": 1, "title": "Data Audit & Assessment", "desc": "Evaluate current analytics setup and data quality"},
+      {"number": 2, "title": "Model Development", "desc": "Build custom attribution and predictive models"},
+      {"number": 3, "title": "Implementation & Training", "desc": "Deploy solutions and train your team"}
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Media Optimization",
+    "icon": "accent",
+    "description": "Systematic approach to optimize your media spend across channels. We implement real-time bidding strategies, budget allocation optimization, and cross-channel performance measurement to maximize your advertising ROI.",
+    "features": [
+      {"title": "Automated bid optimization", "desc": "AI-powered bidding strategies that adapt to performance in real-time"},
+      {"title": "Cross-channel budget allocation", "desc": "Intelligent distribution of spend across all marketing channels"},
+      {"title": "Creative performance analysis", "desc": "Data-driven insights on which creative elements drive results"},
+      {"title": "Incrementality testing", "desc": "Measure true incremental impact of marketing activities"},
+      {"title": "Audience optimization", "desc": "Refine targeting to reach your most valuable prospects"},
+      {"title": "Campaign automation", "desc": "Automated rules and optimization based on performance metrics"}
+    ],
+    "processTitle": "Optimization Framework",
+    "process": [
+      {"number": 1, "title": "Real-time Bidding", "desc": "Automated bid optimization across platforms"},
+      {"number": 2, "title": "Budget Allocation", "desc": "AI-driven cross-channel budget distribution"},
+      {"number": 3, "title": "Performance Monitoring", "desc": "Continuous optimization and reporting"}
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Causal Inference Modeling",
+    "icon": "secondary",
+    "description": "Rigorous statistical methods to establish true causal relationships in your marketing data. We design experiments, implement difference-in-differences analysis, and use synthetic control methods to understand what really drives your business results.",
+    "features": [
+      {"title": "Randomized controlled trials", "desc": "Design and execute statistically rigorous experiments"},
+      {"title": "Quasi-experimental design", "desc": "Extract causal insights from observational data"},
+      {"title": "Instrumental variables", "desc": "Address confounding variables in complex scenarios"},
+      {"title": "Propensity score matching", "desc": "Create fair comparisons between treatment and control groups"},
+      {"title": "Synthetic control methods", "desc": "Estimate causal effects using synthetic control units"},
+      {"title": "Difference-in-differences analysis", "desc": "Measure treatment effects over time and across groups"}
+    ],
+    "processTitle": "Experimental Design",
+    "process": [
+      {"number": 1, "title": "Hypothesis Formation", "desc": "Identify key business questions and formulate testable hypotheses"},
+      {"number": 2, "title": "Experiment Design", "desc": "Design rigorous experiments with proper controls"},
+      {"number": 3, "title": "Statistical Analysis", "desc": "Apply advanced statistical methods to prove causality"}
+    ]
+  }
+]

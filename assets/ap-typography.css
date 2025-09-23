@@ -1,0 +1,129 @@
+/* Analytic Partners inspired font and text styling for PRL Insights */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --ap-font-main: 'Montserrat', 'Roboto', Arial, sans-serif;
+  --ap-font-accent: 'Montserrat', Arial, sans-serif;
+  --ap-text-color: #222;
+  --ap-heading-color: #1a1a1a;
+  --ap-link-color: #0056b3;
+  --ap-link-hover: #e94e77;
+  --ap-btn-bg: #e94e77;
+  --ap-btn-color: #fff;
+  --ap-btn-radius: 2.5rem;
+  --ap-btn-shadow: 0 2px 8px rgba(233,78,119,0.08);
+}
+
+body {
+  font-family: var(--ap-font-main);
+  color: var(--ap-text-color);
+  background: #fff;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ap-font-accent);
+  color: var(--ap-heading-color);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.2rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+p {
+  color: #444;
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: var(--ap-link-color);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--ap-link-hover);
+  text-decoration: underline;
+}
+
+.btn, .button, button {
+  font-family: var(--ap-font-main);
+  background: var(--ap-btn-bg);
+  color: var(--ap-btn-color);
+  border: none;
+  border-radius: var(--ap-btn-radius);
+  padding: 0.7em 2.2em;
+  font-size: 1.08rem;
+  font-weight: 600;
+  box-shadow: var(--ap-btn-shadow);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.btn:hover, .button:hover, button:hover {
+  background: var(--ap-link-hover);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(233,78,119,0.12);
+}
+
+.section-header h1, .section-header h2 {
+  color: var(--ap-heading-color);
+  font-family: var(--ap-font-accent);
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+
+.section-header p {
+  color: #444;
+  font-size: 1.15rem;
+  margin-bottom: 2em;
+}
+
+ul, ol {
+  font-size: 1.08rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .btn, .button, button {
+    font-size: 1rem;
+    padding: 0.7em 1.2em;
+  }
+}
