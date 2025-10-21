@@ -1,6 +1,6 @@
 
 body {
-    font-family: var(--font-sans);
+    font-family: 'Inter', Arial, sans-serif;
     line-height: 1.6;
     color: var(--foreground);
     background-color: var(--background);

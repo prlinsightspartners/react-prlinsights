@@ -1,0 +1,116 @@
+.logo-floating-left {
+  justify-content: flex-start !important;
+  margin-right: 2rem !important;
+  margin-left: 0 !important;
+  display: flex !important;
+}
+/* navbar.css - Styles for the navigation bar */
+/* Floating nav-menu glassy effect */
+.nav-menu-floating {
+  position: fixed !important;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  background: rgba(255,255,255,0.22);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  border-radius: 2rem;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 0.7rem 2.5rem;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  min-width: 320px;
+  max-width: 90vw;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.22);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  border-radius: 2rem;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 16px 24px;
+  font-family: 'Inter', Arial, sans-serif;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+.navbar-logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #111;
+  margin-right: 32px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex: 1;
+}
+
+.navbar-menu-item {
+  font-size: 1.08rem;
+  color: #222;
+  font-weight: 400;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: color 0.2s;
+}
+
+.navbar-menu-item:hover {
+  color: #111;
+}
+
+.navbar-menu-item .plus {
+  color: #8a8d91;
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-login {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #222;
+  border-radius: 24px;
+  padding: 8px 28px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-login:hover {
+  background: #222;
+  color: #fff;
+}
+
+.navbar-demo {
+  background: #23232a;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 8px 28px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s;
+}
+
+.navbar-demo:hover {
+  background: #111;
+}
