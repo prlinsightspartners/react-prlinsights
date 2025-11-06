@@ -10,9 +10,7 @@
 <nav class="navbar">
     <div class="container">
         <div class="nav-header">
-            <a href="/" class="logo" style="display:flex;align-items:center;justify-content:center;padding:0.5rem 1.5rem;">
-                <img src="/assets/PRL_Insights_Logo.png" alt="PRL Insights Logo" style="height:150px;width:150px;object-fit:contain;vertical-align:middle;" />
-            </a>
+            <!-- logo removed per request -->
              <button class="nav-toggle" onclick="toggleMobileNav()">
                 <span></span>
                 <span></span>
@@ -23,7 +21,8 @@
             <a href="/services/" class="nav-link">Services</a>
           <!-- <a href="/integration/" class="nav-link">Integration</a> -->
             <a href="/case-studies/" class="nav-link">Case Studies</a>
-            <a href="/featured-insights/" class="nav-link">Featured Insights</a>
+            <a href="/featured-insights/" class="nav-link">Insights</a>
+            <a href="/careers/" class="nav-link">Careers</a>
             <a href="/contact/" class="nav-link">Contact</a>
             <a href="/contact/" class="btn btn btn-outline btn-lg">Get Demo</a>
             <a href="/client-login/" class="nav-link" title="Client Login" style="display:inline-flex;align-items:center;justify-content:center;margin-right:0.5rem;padding:0.4rem 0.7rem;">
@@ -45,6 +44,14 @@
     var navMenu = navElem.querySelector('.nav-menu');
     var navHeader = navElem.querySelector('.nav-header');
     var logo = navElem.querySelector('.logo');
+    // Center nav options visually in the navbar
+    if (navMenu) {
+        navMenu.style.display = 'flex';
+        navMenu.style.justifyContent = 'center';
+        navMenu.style.alignItems = 'center';
+        navMenu.style.gap = '36px';
+        navMenu.style.margin = '0 auto';
+    }
     var lastScrollY = window.scrollY;
     var floatingClass = 'nav-menu-floating';
     var floatingLogoClass = 'logo-floating-left';
@@ -56,32 +63,36 @@
     window.toggleMobileNav = function() {
         var isActive = navMenu.classList.toggle(mobileNavActiveClass);
         if (isActive) {
-            logo.classList.add(hideLogoClass);
+            if (logo) logo.classList.add(hideLogoClass);
         } else {
             // Only show logo if not floating
             if (window.scrollY <= 40) {
-                logo.classList.remove(hideLogoClass);
+                if (logo) logo.classList.remove(hideLogoClass);
             }
         }
     };
     window.addEventListener('scroll', function() {
         if (window.scrollY > 40) {
             navMenu.classList.add(floatingClass);
-            logo.classList.add(floatingLogoClass);
-            logo.classList.add(hideLogoClass);
+            if (logo) {
+                logo.classList.add(floatingLogoClass);
+                logo.classList.add(hideLogoClass);
+                logo.style.marginRight = '2rem';
+            }
             navHeader.style.justifyContent = 'flex-start';
             navHeader.style.flexDirection = 'row';
-            logo.style.marginRight = '2rem';
         } else {
             navMenu.classList.remove(floatingClass);
-            logo.classList.remove(floatingLogoClass);
-            // Only show logo if mobile nav is not active
-            if (!navMenu.classList.contains(mobileNavActiveClass)) {
-                logo.classList.remove(hideLogoClass);
+            if (logo) {
+                logo.classList.remove(floatingLogoClass);
+                // Only show logo if mobile nav is not active
+                if (!navMenu.classList.contains(mobileNavActiveClass)) {
+                    logo.classList.remove(hideLogoClass);
+                }
+                logo.style.marginRight = '';
             }
             navHeader.style.justifyContent = '';
             navHeader.style.flexDirection = '';
-            logo.style.marginRight = '';
         }
     });
 })();

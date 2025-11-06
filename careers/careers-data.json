@@ -1,5 +1,34 @@
 [
   {
+    "team": "Open Positions",
+    "jobs": [
+      {
+        "title": "Strategic Partner - Director",
+        "type": "Full-time — Senior Leadership",
+        "location": "Remote / Flexible",
+        "applyUrl": "#"
+      },
+      {
+        "title": "Software Engineer",
+        "type": "Hybrid — Regular Employee",
+        "location": "Miami, Florida, United States",
+        "applyUrl": "#"
+      },
+      {
+        "title": "Sales Associate",
+        "type": "Hybrid — Regular Employee",
+        "location": "New York, New York, United States",
+        "applyUrl": "#"
+      },
+      {
+        "title": "Project Manager",
+        "type": "Hybrid — Regular Employee",
+        "location": "Miami, Florida, United States",
+        "applyUrl": "#"
+      }
+    ]
+  },
+  {
     "team": "Customer Engagement Team",
     "jobs": [
       {

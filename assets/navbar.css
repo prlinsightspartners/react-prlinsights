@@ -1,11 +1,5 @@
-.logo-floating-left {
-  justify-content: flex-start !important;
-  margin-right: 2rem !important;
-  margin-left: 0 !important;
-  display: flex !important;
-}
 /* navbar.css - Styles for the navigation bar */
-/* Floating nav-menu glassy effect */
+
 .nav-menu-floating {
   position: fixed !important;
   top: 18px;
@@ -39,13 +33,7 @@
   transition: all 0.3s cubic-bezier(.4,2,.6,1);
 }
 
-.navbar-logo {
-  font-size: 2.2rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #111;
-  margin-right: 32px;
-}
+/* Logo-related rules removed to hide the logo from the navbar */
 
 .navbar-menu {
   display: flex;
