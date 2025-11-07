@@ -6,24 +6,36 @@
   <title>Apply - PRL Insights & Partners</title>
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="stylesheet" href="apply.css">
+  <link rel="stylesheet" href="careers.css">
+  <link rel="icon" href="/assets/favicon.ico" type="/x-icon">
+
 </head>
 <body>
   <script src="../assets/navbar.js"></script>
 
   <main class="apply-main" style="max-width:1100px;margin:2.5rem auto;">
+
+     <!-- Hero Section -->
+	<section class="hero">
+		<div class="container">
+  <div class="section-header">
+    <h1>Careers</h1>
+   </div>
+	</section>
+
     <div class="apply-grid">
       <section class="job-details">
         <h1 id="job-title">Job Title</h1>
         <div id="job-meta" class="job-meta">Type &mdash; Location</div>
-        <div id="job-description" class="job-description">
-          <p>Loading job description...</p>
-        </div>
+        <div id="job-description" class="job-description"></div>
       </section>
 
       <aside class="apply-form">
         <div class="form-card">
           <h2>Apply Now</h2>
           <form id="applicationForm">
+            <!-- Hidden field to reliably capture the job applied for -->
+            <input type="hidden" name="jobTitle" id="hidden-job-title" value="" />
             <label>Full name
               <input type="text" name="name" id="app-name" required />
             </label>
@@ -65,57 +77,96 @@
         </div>
       </aside>
     </div>
-  </main>
+    <script>
+      // Read and normalize URL params, then try to load detailed job description from careers-data.json.
+      // If no exact match, attempt case-insensitive/normalized partial matching. Fall back to inline mapping.
+      const params = new URLSearchParams(window.location.search);
+      const rawTitle = params.get('title') || '';
+      const rawTeam = params.get('team') || '';
+      const rawLocation = params.get('location') || '';
+      const rawType = params.get('type') || '';
 
-  <script>
-    // read query params
-    function qs(key) {
-      var params = new URLSearchParams(window.location.search);
-      return params.get(key) || '';
-    }
-    var title = decodeURIComponent(qs('title')) || 'Job Title';
-    var team = decodeURIComponent(qs('team')) || '';
-    var location = decodeURIComponent(qs('location')) || '';
-    var type = decodeURIComponent(qs('type')) || '';
-
-    document.getElementById('job-title').textContent = title;
-    document.getElementById('job-meta').innerHTML = (type ? type : 'Role') + ' &mdash; ' + (location || 'Location');
-
-    // simple placeholder descriptions based on title (can be extended)
-    var descriptions = {
-      'Strategic Partner - Director': '<p>The Strategic Partner - Director will lead partnership strategy, cultivate relationships with strategic partners, and drive revenue growth through alliances.</p><ul><li>Build & manage partner relationships</li><li>Define joint GTM strategies</li><li>Own partnership P&L metrics</li></ul>',
-      'Software Engineer': '<p>The Software Engineer will design, build, and maintain web applications and services. Strong JS/React/node skills are preferred.</p><ul><li>Develop features end-to-end</li><li>Write tests and documentation</li><li>Collaborate with product and design</li></ul>',
-      'Sales Associate': '<p>Sales Associate will support sales outreach, pipeline generation, and account coordination to grow business.</p><ul><li>Prospect and qualify leads</li><li>Support demos and RFPs</li><li>Coordinate with marketing</li></ul>',
-      'Project Manager': '<p>The Project Manager will oversee project delivery, timelines, and cross-functional coordination to ensure client success.</p><ul><li>Manage schedules and risks</li><li>Communicate with stakeholders</li><li>Track project health</li></ul>'
-    };
-
-    document.getElementById('job-description').innerHTML = descriptions[title] || '<p>We are looking for talented individuals. Please provide your details on the right to apply.</p>';
-
-    // handle form submit (no backend) - show a summary and prevent default
-    document.getElementById('applicationForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      var name = document.getElementById('app-name').value.trim();
-      var email = document.getElementById('app-email').value.trim();
-      var phone = document.getElementById('app-phone').value.trim();
-      var auth = document.getElementById('app-authorized').value;
-      var exp = document.getElementById('app-experience').value;
-      var notes = document.getElementById('app-notes').value.trim();
-      var resume = document.getElementById('app-resume').files[0];
-
-      if (!name || !email) {
-        document.getElementById('applyResult').textContent = 'Please enter your name and email.';
-        return;
+      // normalize helper: lowercase, trim, collapse spaces, remove some punctuation for robust matching
+      function normalize(str){
+        return String(str || '')
+          .toLowerCase()
+          .replace(/\s+/g, ' ')
+          .replace(/[\u2018\u2019\u201c\u201d]/g, "'")
+          .replace(/[^\w\s\-\/]/g,'')
+          .trim();
       }
 
-      // Simple client-side confirmation
-      var msg = 'Thanks ' + name + '! Your application for "' + title + '" has been received.';
-      if (resume) msg += ' (Resume: ' + resume.name + ')';
-      msg += ' We will review your application and contact you via email.';
-      document.getElementById('applyResult').textContent = msg;
-      // Optionally clear form or disable
-      document.getElementById('applicationForm').reset();
-    });
-  </script>
+      const title = decodeURIComponent(rawTitle);
+      const team = decodeURIComponent(rawTeam);
+      const location = decodeURIComponent(rawLocation);
+      const type = decodeURIComponent(rawType);
+
+      // Immediately prefill page header and hidden input so the form submission includes the job title
+      document.getElementById('job-title').textContent = title || document.getElementById('job-title').textContent;
+      document.getElementById('job-meta').innerHTML = (type || 'Role') + ' &mdash; ' + (location || 'Location');
+      var hiddenJob = document.getElementById('hidden-job-title');
+      if (hiddenJob) hiddenJob.value = title || '';
+
+      async function loadJobDescription() {
+        var descElem = document.getElementById('job-description');
+        try {
+          var resp = await fetch('careers-data.json');
+          if (resp.ok) {
+            var data = await resp.json();
+            var found = null;
+            const nTitle = normalize(title);
+            data.forEach(function(section){
+              if (found) return;
+              if (section.jobs && section.jobs.length) {
+                section.jobs.forEach(function(job){
+                  if (found) return;
+                  const nJobTitle = normalize(job.title || '');
+                  // exact normalized match
+                  if (nJobTitle && nJobTitle === nTitle && nTitle !== '') {
+                    found = { job: job, team: section.team || '' };
+                    return;
+                  }
+                  // partial match: either contains the other
+                  if (nJobTitle && nTitle && (nJobTitle.includes(nTitle) || nTitle.includes(nJobTitle))) {
+                    found = { job: job, team: section.team || '' };
+                    return;
+                  }
+                });
+              }
+            });
+            if (found) {
+              // populate meta using the discovered job data (prefer job fields)
+              document.getElementById('job-title').textContent = found.job.title || title;
+              document.getElementById('job-meta').innerHTML = (found.job.type || type || 'Role') + ' &mdash; ' + (found.job.location || location || 'Location');
+              if (found.job.description) {
+                descElem.innerHTML = '<p>' + found.job.description + '</p>';
+              } else {
+                descElem.innerHTML = '<p>We are looking for talented individuals. Please provide your details on the right to apply.</p>';
+              }
+              return;
+            }
+          }
+        } catch (err) {
+          // fetch failed — fall back to inline mapping
+          console.warn('Could not load careers-data.json:', err);
+        }
+
+        // fallback mapping (short summaries)
+        var fallback = {
+          'Strategic Partner - Director': '<p>The Strategic Partner - Director will lead partnership strategy, identify new alliance opportunities, and help scale joint go-to-market initiatives.</p>',
+          'Software Engineer': '<p>The Software Engineer will design, build, and maintain web and data platform components, contribute to API design, and collaborate with product and data teams.</p>',
+          'Sales Associate': '<p>Support the sales team across lead generation, outreach, and deal coordination. Help qualify opportunities and manage CRM updates.</p>',
+          'Project Manager': '<p>Coordinate project delivery across technical and client teams, track milestones, and ensure timely execution.</p>'
+        };
+        descElem.innerHTML = fallback[title] || fallback[decodeURIComponent(title)] || '<p>We are looking for talented individuals. Please provide your details on the right to apply.</p>';
+      }
+
+      loadJobDescription();
+    </script>
+  </main>
+
+   <script src="careers.js"></script>
+  <script src="../assets/footer.js"></script>
 
 </body>
 </html>
