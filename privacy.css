@@ -1,0 +1,9 @@
+/* Basic styling for privacy page */
+.privacy-main { background: #fff; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.04); padding: 2.2rem; }
+.privacy-main h1 { font-size: 2rem; margin-bottom: 0.2rem; }
+.privacy-main .lead { color: #666; margin-bottom: 1.2rem; }
+.privacy-content section { margin-bottom: 1.6rem; }
+.privacy-content h2 { font-size: 1.15rem; margin-bottom: 0.6rem; color: #222; }
+.privacy-content p, .privacy-content li { color: #444; line-height: 1.6; }
+.privacy-content ul { margin-left: 1.1rem; }
+@media (max-width:900px){ .privacy-main { margin:1rem; padding:1rem; } }

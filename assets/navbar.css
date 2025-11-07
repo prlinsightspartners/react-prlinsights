@@ -2,7 +2,7 @@
 
 .nav-menu-floating {
   position: fixed !important;
-  top: 18px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2000;
@@ -36,9 +36,9 @@
 }
 
 .navbar-menu-item {
-  font-size: 1.08rem;
+  font-size: 0.95rem; /* slightly smaller */
   color: #222;
-  font-weight: 400;
+  font-weight: 700; /* bold */
   background: none;
   border: none;
   cursor: pointer;
@@ -52,7 +52,7 @@
 
 .navbar-menu-item .plus {
   color: #8a8d91;
-  font-size: 1rem;
+  font-size: 0.5rem;
   margin-left: 4px;
 }
 

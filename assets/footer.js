@@ -62,8 +62,8 @@
                 	<div class="copyright">
                 		© 2025 PRL Inights &amp; Partners. All rights reserved.
                 	</div>
-                	<div class="footer-links">
-                		<a href="#">Privacy Policy</a>
+                 	<div class="footer-links">
+                		<a href="/privacy.html">Privacy Policy</a>
                 		<a href="#">Terms of Service</a>
                 		<a href="#">API Documentation</a>
                 	</div>
