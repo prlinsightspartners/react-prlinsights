@@ -38,36 +38,6 @@
 		</div>
 	</section>
 
-	<!-- Contact Information -->
-	<!--
-	<section class="services">
-		<div class="container">
-			<div class="contact-info-grid">
-				<div class="contact-info-card">
-					<div class="contact-icon email">📧</div>
-					<h3>Email</h3>
-					<p>hello@prlinsights.com</p>
-				</div>
-				<div class="contact-info-card">
-					<div class="contact-icon phone">📞</div>
-					<h3>Phone</h3>
-					<p>+1 (647) 425-7751</p>
-				</div>
-				<div class="contact-info-card">
-					<div class="contact-icon location">📍</div>
-					<h3>Locations</h3>
-					<p>Toronto, Canada</p>
-				</div>
-				<div class="contact-info-card">
-					<div class="contact-icon time">⏰</div>
-					<h3>Response Time</h3>
-					<p>Within 2 business hours</p>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	
-
 	<!-- Contact Form Section -->
 	<section class="contact">
 		<div class="container">
@@ -152,10 +122,20 @@
 						</div>
 					</div>
 				</div>
-				<div class="contact-form-section" id="contactFormContainer" style="flex:1 1 0;min-width:340px;"></div>
-			</div>
+
+				<!-- Contact Form Section -->
+				<div class="contact-form-section" id="contactFormContainer" style="flex:1 1 0;min-width:340px;">
+					<div class="contact-form-section" style="max-width:520px;margin:0 auto;padding:0;">
+     				 <h2>Contact Us</h2>
+      						<div style="padding:1rem">
+        					<iframe data-tally-src="https://tally.so/embed/2E8J7V?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="692" frameborder="0" marginheight="0" marginwidth="0" title="Contact Us"></iframe>
+      						</div>
+    				</div>
+    				<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 				</div>
 			</div>
+			</div>
+		</div>
 		</div>
 	</section>
 
@@ -200,10 +180,22 @@
    <!-- Footer injected by assets/footer.js -->
 		<script src="/assets/footer.js"></script>
 		<script src="/contact/faq.js"></script>
-		<script type="module">
-			import { renderContactFormSection } from './contact-form.js';
-			renderContactFormSection(document.getElementById('contactFormContainer'));
-		</script>
+				<script>
+					// Try to call the module-renderer; if it's not yet available attach a short poll to wait
+					(function attachContactForm(){
+						function tryInvoke(){
+							var fn = window.renderContactFormSection || (window && window.__esModule && window.renderContactFormSection);
+							var container = document.getElementById('contactFormContainer');
+							if (fn && container) {
+								try { fn(container); } catch(e){ console.warn('renderContactFormSection failed', e); }
+							} else {
+								// poll a few times
+								setTimeout(tryInvoke, 60);
+							}
+						}
+						tryInvoke();
+					})();
+				</script>
 		<script src="/contact/contact.js"></script>
 
 </body>

@@ -5,8 +5,8 @@
   const footerHTML = `
     <footer class="footer popular-footer">
             <div class="container">
-               <div class="footer-content" style="display:flex;align-items:flex-start;justify-content:space-between;gap:3rem;flex-direction:row;">
-                    <div class="footer-logo-col" style="display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:1rem;">
+      <div class="footer-content" style="display:flex;align-items:flex-start;justify-content:space-between;gap:3rem;flex-direction:row;flex-wrap:nowrap;">
+        <div class="footer-logo-col" style="flex:0 0 220px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:1rem;">
                         <img src="/assets/PRL_Insights_Logo.png" alt="PRL Insights Logo" style="height:200px;width:200px;object-fit:contain;" />
                             <div class="social-links" style="margin-top:1rem;display:flex;gap:1.2rem;">
                             <a href="https://www.linkedin.com/company/prlinsights/" class="social-link" title="LinkedIn" target="_blank" rel="noopener" style="color:#18181d;font-weight:600;">
@@ -27,7 +27,7 @@
                             </a>
                         </div>
                     </div>
-                    <div style="display:flex;flex-direction:row;align-items:flex-start;gap:3rem;">
+                    <div style="flex:1 1 auto;display:flex;flex-direction:row;align-items:flex-start;gap:3rem;">
                         <div class="footer-section">
                             <h4>Services</h4>
                             <ul>
@@ -48,14 +48,11 @@
                         </div>
                     </div>
                     
-                    <div class="footer-newsletter" style="max-width:200px;margin:1rem 0 0.5rem 0;align-self:flex-start;">
-                        <form id="footerNewsletterForm">
-                            <h4>Stay in touch</h4>
-                            <div style="display:flex;flex-direction:column;gap:0.7rem;">
-                                <input type="email" id="footerNewsletterEmail" name="email" required style="padding:0.7em 0.8em;font-size:1.1rem;border:1px solid #222;border-radius:0.15em;outline:none;min-width:220px;">
-                                <button type="submit" style="margin-top:0.5rem;">Submit</button>
-                            </div>
-                        </form>
+                    <div class="footer-newsletter" style="flex:0 0 300px;max-width:300px;margin:1rem 0 0.5rem 0;align-self:flex-start;">
+                        <h4>Stay in touch</h4>
+                        <div id="footerTallyWrap" style="margin-top:0.6rem;">
+                          <iframe data-tally-src="https://tally.so/embed/0QrJA6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="120" frameborder="0" marginheight="0" marginwidth="0" title="Subscribe to Newsletter"></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
@@ -78,44 +75,19 @@
         document.querySelectorAll('footer.footer').forEach(f => f.remove());
         // Inject at end of body
         document.body.insertAdjacentHTML('beforeend', footerHTML);
-        // Newsletter form handler
-        var form = document.getElementById('footerNewsletterForm');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var email = document.getElementById('footerNewsletterEmail').value.trim();
-                // Basic email validation
-                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(email)) {
-                    alert('Please enter a valid email address.');
-                    return;
-                }
-                var scriptURL = 'https://script.google.com/macros/s/AKfycby8KHQ7hXpRoJj4kx_Sjt4bNO4JO9II9Ubp6n-47hV2niDf2rsFu2Ray-Yc61sSKa1L/exec';
-                var formData = new FormData();
-                formData.append('email', email);
-                fetch(scriptURL, {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(function(response) {
-                    if (response.ok) {
-                        form.style.display = 'none';
-                        var parent = form.parentElement;
-                        var thankYouMsg = document.createElement('div');
-                        thankYouMsg.style.margin = '1.5rem 0 0 0';
-                        thankYouMsg.style.fontSize = '1.35rem';
-                        thankYouMsg.style.fontWeight = '500';
-                        thankYouMsg.innerHTML = "Thanks! You're subscribed <span style='font-size:1.3em;'>👍</span>";
-                        parent.appendChild(thankYouMsg);
-                    } else {
-                        alert('There was a problem subscribing. Please try again.');
-                    }
-                })
-                .catch(function() {
-                    alert('There was a problem subscribing. Please try again.');
-                });
-            });
-        }
+        // Initialize Tally embed script for footer newsletter (loads any iframe[data-tally-src])
+        (function initFooterTally(){
+          var d = document;
+          var w = 'https://tally.so/widgets/embed.js';
+          var onLoad = function(){ if (typeof Tally !== 'undefined') Tally.loadEmbeds(); else d.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(e){ e.src = e.dataset.tallySrc; }); };
+          if (typeof Tally !== 'undefined') return onLoad();
+          if (d.querySelector('script[src="'+w+'"]') == null) {
+            var s = d.createElement('script');
+            s.src = w; s.onload = onLoad; s.onerror = onLoad; d.body.appendChild(s);
+          } else {
+            onLoad();
+          }
+        })();
     }
 
   if (document.readyState === 'loading') {

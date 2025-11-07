@@ -18,6 +18,20 @@
   padding: 1rem;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
+
+/* Make the form-card taller on desktop so embedded forms (iframes) don't require scrolling */
+@media (min-width: 900px) {
+  .apply-form .form-card {
+    min-height: 820px;
+    padding: 1.2rem;
+  }
+  /* Ensure embedded iframe fills the card vertically */
+  .apply-form .form-card iframe[data-tally-src],
+  .apply-form .form-card iframe {
+    height: 760px !important;
+    min-height: 600px;
+  }
+}
 .apply-form h2 { margin-top: 0; margin-bottom: 0.6rem; }
 .apply-form label { display:flex; flex-direction:column; gap:0.5rem; margin-bottom:0.9rem; font-size:0.95rem; }
 .apply-form input[type="text"],
