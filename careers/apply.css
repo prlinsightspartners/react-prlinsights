@@ -19,7 +19,7 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 .apply-form h2 { margin-top: 0; margin-bottom: 0.6rem; }
-.apply-form label { display:block; margin-bottom:0.6rem; font-size:0.95rem; }
+.apply-form label { display:flex; flex-direction:column; gap:0.5rem; margin-bottom:0.9rem; font-size:0.95rem; }
 .apply-form input[type="text"],
 .apply-form input[type="email"],
 .apply-form input[type="tel"],
@@ -31,6 +31,13 @@
   border-radius:4px;
   box-sizing:border-box;
   margin-top:0.25rem;
+}
+
+/* Extra padding for fields that are required to improve touch targets and readability */
+.apply-form input:required,
+.apply-form select:required,
+.apply-form textarea:required {
+  padding: 1rem 1rem;
 }
 .apply-submit {
   margin-top:0.6rem;

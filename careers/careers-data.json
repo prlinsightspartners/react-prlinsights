@@ -3,31 +3,31 @@
     "team": "Open Positions",
     "jobs": [
       {
-        "title": "Strategic Partner - Director",
-        "type": "Full-time — Senior Leadership",
+        "title": "Lead Full-Stack Developer",
+        "type": "Hybrid — Regular Employee",
         "location": "Remote / Flexible",
-        "description": "Lead our strategic partnerships program, identify new alliance opportunities, and help scale joint go-to-market initiatives. You will work closely with leadership to drive partnership strategy and revenue targets.",
+        "job-description": "<p>We’re looking for a Lead Full-Stack Developer who thrives at the intersection of architecture, scalability, and product innovation. You’ll play a key role in designing and developing our next-generation SaaS platform — driving the end-to-end technical strategy across frontend, backend, and data systems.</p>\n\n<p>You’ll lead engineering efforts that power seamless user experiences, data-driven insights, and high-performance APIs — while mentoring a growing team of developers. This role is ideal for someone passionate about building robust, extensible systems using modern web technologies like React, Node.js, GraphQL, PostgreSQL, and cloud-native architectures.</p>\n\n<p><strong>What You’ll Do</strong></p>\n\n<p>Architect and implement full-stack systems powering our SaaS product — from frontend interfaces to backend services and API ecosystems.</p>\n\n<p>Design scalable infrastructure for multi-tenant SaaS applications, focusing on performance, security, and data integrity.</p>\n\n<p>Lead technical design discussions and guide decisions around architecture, integrations, and platform evolution.</p>\n\n<p>Develop and maintain APIs and SDKs that enable integrations with third-party platforms, analytics tools, and client applications.</p>\n\n<p>Work with product and design teams to translate business needs into technical solutions that deliver measurable impact.</p>\n\n<p>Implement GraphQL schemas and resolvers to power modern, flexible data delivery to the frontend.</p>\n\n<p>Oversee database design and optimization in PostgreSQL, ensuring data consistency, scalability, and efficient querying.</p>\n\n<p>Mentor and guide junior engineers, fostering best practices in code quality, testing, and CI/CD automation.</p>\n\n<p>Drive system observability and performance monitoring using modern DevOps and cloud tools.</p>\n\n<p>Collaborate cross-functionally with product managers, designers, and data engineers to deliver new product features with technical excellence and operational reliability.</p>\n\n<p><strong>We’re Looking for Someone Who:</strong></p>\n\n<p>Has 7+ years of full-stack development experience, with at least 2 years in a technical leadership or senior developer role.</p>\n\n<p>Possesses strong technical depth in modern web technologies — including React, Node.js (Express or NestJS), GraphQL, and PostgreSQL.</p>\n\n<p>Demonstrates experience architecting scalable SaaS platforms or cloud-based enterprise systems.</p>\n\n<p>Is fluent in API design, SDK development, and third-party integrations with an emphasis on maintainability and security.</p>\n\n<p>Understands microservices, REST/GraphQL design patterns, and has a strong foundation in distributed systems.</p>\n\n<p>Brings a solid grasp of frontend engineering principles — including state management, performance optimization, and component-driven design.</p>\n\n<p>Is comfortable setting up and maintaining DevOps pipelines, CI/CD workflows, and cloud deployments (AWS, GCP, or Azure).</p>\n\n<p>Communicates clearly and effectively with both technical and non-technical stakeholders, and can make architecture decisions that align with product goals.</p>\n\n<p>Values clean code, maintainability, documentation, and team empowerment as part of engineering excellence.</p>\n\n<p><strong>It’s a Plus If You:</strong></p>\n\n<p>Have led SaaS platform development from concept to launch in a startup or product-led company.</p>\n\n<p>Have experience working with containerized environments (Docker, Kubernetes) or serverless frameworks.</p>\n\n<p>Have implemented authentication and authorization systems (OAuth, JWT, SSO) for B2B/B2C SaaS applications.</p>\n\n<p>Have familiarity with data analytics pipelines, event tracking systems, or integration with BI tools.</p>\n\n<p>Have built developer-facing SDKs or APIs for platform extensibility.</p>\n\n<p>Have hands-on experience with performance tuning, caching layers (Redis, Varnish), and asynchronous job queues.</p>\n\n<p>Thrive in a fast-paced, agile environment where innovation and ownership are key.</p>\n\n<p><strong>Why Join Us</strong></p>\n\n<p>Shape the core architecture of a cutting-edge SaaS platform.</p>\n\n<p>Work alongside talented engineers, product thinkers, and growth leaders.</p>\n\n<p>Contribute to an engineering culture that values innovation, autonomy, and collaboration.</p>\n\n<p>Competitive compensation, growth opportunities, and a focus on long-term technical excellence.</p>",
         "applyUrl": "#"
       },
       {
         "title": "Software Engineer",
-        "type": "Hybrid — Regular Employee",
+        "type": "Hybrid — Contract",
         "location": "Canada",
-        "description": "Build and maintain web and data platform components, contribute to API design, and collaborate with product and data teams. Strong JavaScript and backend experience preferred; familiarity with data pipelines is a plus.",
+        "job-description": "Build and maintain web and data platform components, contribute to API design, and collaborate with product and data teams. Strong JavaScript and backend experience preferred; familiarity with data pipelines is a plus.",
         "applyUrl": "#"
       },
       {
         "title": "Sales Associate",
         "type": "Hybrid — Regular Employee",
         "location": "Canada",
-        "description": "Support the sales team across lead generation, outreach, and deal coordination. You'll help qualify opportunities, manage CRM updates, and prepare materials for client conversations.",
+        "job-description": "Support the sales team across lead generation, outreach, and deal coordination. You'll help qualify opportunities, manage CRM updates, and prepare materials for client conversations.",
         "applyUrl": "#"
       },
       {
         "title": "Project Manager",
         "type": "Hybrid — Regular Employee",
         "location": "Toronto, Canada",
-        "description": "Coordinate project delivery across technical and client teams, track milestones, and ensure timely execution. Strong communication skills and experience running analytics or software projects are ideal.",
+        "job-description": "Coordinate project delivery across technical and client teams, track milestones, and ensure timely execution. Strong communication skills and experience running analytics or software projects are ideal.",
         "applyUrl": "#"
       }
     ]
