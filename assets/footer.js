@@ -7,7 +7,7 @@
             <div class="container">
       <div class="footer-content" style="display:flex;align-items:flex-start;justify-content:space-between;gap:3rem;flex-direction:row;flex-wrap:nowrap;">
         <div class="footer-logo-col" style="flex:0 0 220px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:1rem;">
-                        <img src="/assets/PRL_Insights_Logo.png" alt="PRL Insights Logo" style="height:200px;width:200px;object-fit:contain;" />
+                        <img src="/assets/images/PRL_Insights_Logo.png" alt="PRL Insights Logo" style="height:200px;width:200px;object-fit:contain;" />
                             <div class="social-links" style="margin-top:1rem;display:flex;gap:1.2rem;">
                             <a href="https://www.linkedin.com/company/prlinsights/" class="social-link" title="LinkedIn" target="_blank" rel="noopener" style="color:#18181d;font-weight:600;">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="#18181d" style="vertical-align:middle;margin-right:0.4em;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.04 0 3.601 2.002 3.601 4.604v5.592z"/></svg>

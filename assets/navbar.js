@@ -20,7 +20,7 @@
 
         <div class="nav-menu" id="navMenu">
             <a href="/" class="nav-link logo" aria-label="Home" style="display:inline-flex;align-items:center;gap:0.5rem;">
-                <img src="/assets/PRL_Insights_Logo.png" alt="PRL Insights Logo" style="height:36px;width:auto;display:block;" />
+                <img src="/assets/images/PRL_Insights_Logo.png" alt="PRL Insights Logo" style="height:36px;width:auto;display:block;" />
             </a>
             <a href="/services/" class="nav-link">SERVICES</a>
             <a href="/case-studies/" class="nav-link">PRODUCTS</a>

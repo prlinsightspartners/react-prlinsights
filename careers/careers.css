@@ -20,7 +20,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('/assets/PRL_Insights_Logo.png');
+  background-image: url('/assets/images/PRL_Insights_Logo.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 40%;

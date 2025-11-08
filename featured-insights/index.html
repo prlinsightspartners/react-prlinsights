@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../assets/ap-typography.css">
     <link rel="stylesheet" href="../assets/style.css">
     <link rel="stylesheet" href="featured-insights.css">
-    <link rel="icon" href="/assets/favicon.ico" type="/x-icon">
+    <link rel="icon" href="/assets/images/favicon.ico" type="/x-icon">
             <!-- Tag Manager & Analytics -->
             <script src="/assets/tag-manager.js"></script>
 <body>
@@ -23,29 +23,84 @@
    <!-- Navigation injected by assets/navbar.js -->
     <script src="/assets/navbar.js"></script>
 
-    <header class="featured-header">
-        <h1>Featured Insights</h1>
-        <p>Explore our latest articles, blogs, and thought leadership in marketing analytics, data science, and business transformation.</p>
+    <header>
     </header>
     
     <main class="featured-main">
         <aside class="featured-sidebar">
+        
+            <!-- View All block (prominent) -->
+            <a href="/featured-insights/" class="sidebar-view-all">View All</a>
+
+            <!-- Categories list styled to match the provided design -->
+            <nav class="sidebar-categories" aria-label="Categories">
+                <a class="category-item" href="#">Marketing Analytics</a>
+                <a class="category-item" href="#">Cross-Channel Attribution</a>
+                <a class="category-item" href="#">Marketing Mix Modeling</a>
+                <a class="category-item" href="#">Data Privacy Regulations</a>
+                <a class="category-item" href="#">Incrementality Testing</a>
+            </nav>
             <div class="author-name">PRL Insights Team</div>
             <div class="author-bio">Experts in marketing analytics, causal inference, and business transformation. Sharing actionable insights and proven strategies for data-driven growth.</div>
-            <h2>Search Insights</h2>
-            <input type="text" placeholder="Search articles..." style="width:100%;padding:0.5rem;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;">
-            <h2>Categories</h2>
-            <ul style="list-style:none;padding:0;margin:0 0 1rem 0;">
-                <li><a href="#">All</a></li>
-                <li><a href="#">Marketing Analytics</a></li>
-                <li><a href="#">Causal Inference</a></li>
-                <li><a href="#">Media Optimization</a></li>
-                <li><a href="#">Data Integration</a></li>
-            </ul>
+
         </aside>
         <section class="featured-content">
+            <!--
             <div class="featured-list" id="articlesGrid">
-                <!-- Articles will be loaded here dynamically -->
+               <div class="case-study-card">
+            </div>
+             -->
+
+            <!-- Featured Insights static preview grid (mirrors case-studies-grid layout) -->
+            <div class="featured-insights-grid case-studies-grid">
+                <div class="case-study-card">
+                    <img src="../assets/images/feature_insights_cover.png" alt="Causal inference article">
+                    <div class="case-study-content">
+                        <span class="industry-badge">ANALYTICS</span>
+                        <h3>Causal Inference in Ad Effectivenes: Moving Beyond Correlation to True Impact</h3>
+                        <div class="tags">
+                            <span class="tag">Causal Inference</span>
+                            <span class="tag">Experimentation</span>
+                        </div>
+                        <a href="?id=causal-inference-ad-effectiveness" class="featured-readmore grid-readmore">Read More</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <img src="../assets/images/feature_insights_cover.png" alt="Marketing mix modeling article">
+                    <div class="case-study-content">
+                        <span class="industry-badge">MMM</span>
+                        <h3>Why Marketing Mix Modeling is gaining traction in this multi-touch attribution world</h3>
+                        <div class="tags">
+                            <span class="tag">Marketing Mix</span>
+                            <span class="tag">Econometrics</span>
+                        </div>
+                        <a href="?id=mmm-gaining-traction-in-mta-world" class="featured-readmore grid-readmore">Read More</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <img src="../assets/images/feature_insights_cover.png" alt="Incrementality testing article">
+                    <div class="case-study-content">
+                        <span class="industry-badge">INCREMENTALITY</span>
+                        <h3>Essential considerations for digital marketers to implement leading marketing analytics practices through incrementality testing</h3>
+                        <div class="tags">
+                            <span class="tag">Testing</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <a href="?id=esssential-ma-practices" class="featured-readmore grid-readmore">Read More</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <img src="../assets/images/feature_insights_cover.png" alt="E-commerce econometric modeling article">
+                    <div class="case-study-content">
+                        <span class="industry-badge">E-COMMERCE</span>
+                        <h3>E-commerce Econometric Modeling of Promotions and Media Mix</h3>
+                        <div class="tags">
+                            <span class="tag">Econometrics</span>
+                            <span class="tag">E-commerce</span>
+                        </div>
+                        <a href="?id=econometric-modeling-ecommerce" class="featured-readmore grid-readmore">Read More</a>
+                    </div>
+                </div>
             </div>
             <div id="articleDetail" style="display:none;max-width:800px;margin:2rem auto;"></div>
         </section>
